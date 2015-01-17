@@ -1,0 +1,46 @@
+{
+  "name": "mocoverage",
+  "version": "1.0.0",
+  "description": "a mocha reporter with coverage using blanket.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha --check-leaks --ui exports --require blanket -R ../../../"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "./index.js",
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ],
+      "output-reporter": "spec"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcoe/mocoverage.git"
+  },
+  "keywords": [
+    "mocha",
+    "blanket",
+    "coverage"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcoe/mocoverage/issues"
+  },
+  "homepage": "https://github.com/bcoe/mocoverage",
+  "dependencies": {
+    "mocha-text-cov": "^0.1.0"
+  },
+  "peerDependencies": {
+    "blanket": "^1.1.6",
+    "mocha": "^2.1.0"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2"
+  }
+}
